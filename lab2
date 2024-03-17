@@ -1,0 +1,82 @@
+//Bai 1:
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cout << " Nhap gia tri cua a: " << endl;
+    cin >> a;
+    cout << " Nhap gia tri cua b:" << endl;
+    cin >> b;
+    if (a % b == 0) {
+        cout << " a chia het cho b " << endl;
+    }
+    else {
+        cout << " a khong chia het cho b " << endl;
+    }
+    return 0;
+ }
+ //Bai 2:
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b;
+    cout << "Nguoi thu nhat a: " << endl;
+    cin >> a;
+    cout << "Nguoi thu hai b: " << endl;
+    cin >> b;
+    if ((a == 2 && b == 0) || (a == 0 && b == 5) || (a == 5 && b == 2)) {
+        cout << "b win" << endl;
+    }
+    else if ((b == 2 && a == 0) || (b == 0 && a == 5) || (b == 5 && a == 2)) {
+        cout << "a win" << endl;
+    }
+    else {
+        cout << "Nhap du lieu sai!" << endl;
+    }
+    //Bai 3: ax^2 + bx + c = 0
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+
+    float a, b, c, delta, x1, x2;
+    cout << "Nhap a = ";
+    cin >> a;
+    cout << "Nhap b = ";
+    cin >> b;
+    cout << "Nhap c = ";
+    cin >> c;
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0) {
+                cout << "Ptr vo so nghiem" << endl;
+            }
+            else {
+                cout << "Ptr vo nghiem" << endl;
+            }
+        }
+        else {
+            cout << "Ptr co nghiem duy nhat: " << -c / b << endl;
+        }
+    }
+    else {
+        delta = pow(b, 2) - 4 * a * c;
+        if (delta > 0) {
+            x1 = (-b + sqrt(delta)) / (2 * a);
+            x2 = (-b - sqrt(delta)) / (2 * a);
+            cout << "Nghiem thu nhat x1 = " << x1 << endl;
+            cout << "Nghiem thu hai x2 = " << x2 << endl;
+        }
+        else if (delta == 0) {
+            cout << "Ptr co nghiem kep: x1 = x2 = " << -b / 2 * a << endl;
+        }
+        else {
+            cout << "Ptr vo nghiem" << endl;
+        }
+    }
+    return 0;
+}
